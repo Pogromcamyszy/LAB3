@@ -1,0 +1,12 @@
+﻿@model LAB3.Models.Dane;
+@using (Html.BeginForm("Form","Dane",FormMethod.Post))
+{
+  @Html.ValidationSummary(false,"", new{ @class = "text-danger" })  
+  <p>Twoje imie: @Html.TextBoxFor(a => a.Imie)</p>
+  <p>Twoje Email: @Html.TextBoxFor(a => a.Email)</p>
+    <p>Twoje Temat: @Html.TextBoxFor(a => a.Temat)</p>
+    <p>Twoje imie: @Html.TextBoxFor(a => a.Tresc)</p>
+    <input type="submit" />
+}
+
+
