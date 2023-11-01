@@ -1,12 +1,39 @@
 ﻿@model LAB3.Models.Dane;
 @using (Html.BeginForm("Form","Dane",FormMethod.Post))
 {
-  @Html.ValidationSummary(false,"", new{ @class = "text-danger" })  
-  <p>Twoje imie: @Html.TextBoxFor(a => a.Imie)</p>
-  <p>Twoje Email: @Html.TextBoxFor(a => a.Email)</p>
-    <p>Twoje Temat: @Html.TextBoxFor(a => a.Temat)</p>
-    <p>Twoje imie: @Html.TextBoxFor(a => a.Tresc)</p>
-    <input type="submit" />
+@Html.ValidationSummary(false,"", new{ @class = "text-danger" })
+
+<lable asp-for="Imie">Imie</lable>
+<input asp-for="Imie" />
+<br />
+
+<lable asp-for="Email">Email</lable>
+<input asp-for="Email" />
+<br />
+
+<lable asp-for="Password">Password</lable>
+<input asp-for="Password" />
+<br />
+
+<lable asp-for="ConfirmPassword">ConfirmPassword</lable>
+<input asp-for="ConfirmPassword" />
+<br />
+
+<lable asp-for="PhoneNumber">PhoneNumber</lable>
+<input asp-for="PhoneNumber" />
+<br />
+
+<lable asp-for="Age">Age</lable>
+<input asp-for="Age" value="9" />
+<br />
+
+<select asp-for="City"
+        asp-items="Html.GetEnumSelectList<Dane.Cities>()">
+</select>
+
+
+<br />
+<input type="submit" />
 }
 
 
